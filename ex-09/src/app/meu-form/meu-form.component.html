@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <section class="property-binding">   
+                <article>   
+                    <h3>
+                        Interpolação | Interpolation
+                    </h3>
+                    <p>String renderizada com Interpolação {{ url }}</p>
+                    <p>Resultado de 1 + 1 = {{ 1 + 1 }}</p>
+                    <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
+                    <p>Curso Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+                </article>
+            
+                <article>
+                    <h3>Property Binding</h3>
+                    <img src="{{ urlImage }}"> <br><br>
+                    <img [src]="urlImage">
+                </article>
+                <br><br>
+                <article>
+                    <h3>DATA BINDING</h3>
+                    <input type="text"
+                        [value]="nome"
+                        (input)="nome = evento.value"
+                        #evento
+                    /> 
+            
+                    <input type="text"
+                        [(ngModel)]="nome"
+                        (ngModelChange)="nome = $event"
+                    />
+            
+                    <input type="text"
+                        [(ngModel)]="nome"
+                    />
+            
+                    <input type="text"
+                        bindon-ngModel="nome"
+                    />
+            
+                    <p>Você digitou o {{ nome }}</p>
+            
+                    <div>
+                        
+                        <h3>Meu nome é {{ pessoa.nome }}, tenho {{ pessoa.idade }} anos de idade, e sou do sexo {{ pessoa.sexo }}</h3>
+                        <input type="text" [(ngModel)]="pessoa.nome">
+                        <input type="text" [(ngModel)]="pessoa.idade">
+                        <input type="text" [(ngModel)]="pessoa.sexo">
+                    </div>
+                </article>
+            </section>
+            
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <section>
+                <article>   
+                    <h3>Input/Output Properties</h3>
+                
+                    <app-input-property 
+                    [qualBebida]="bebida"
+                    [alguem]="pessoa"
+                    [nome]="nomeCurso"
+                    ></app-input-property>
+            
+            
+                    <contador [valor]="valorInicial"
+                        (mudouValor)="onMudouValor($event)"
+                    ></contador>
+            
+            
+                    <app-test></app-test>
+            
+            
+            
+                </article>
+            </section>
+        </div>
+    </div>
+</div>
+
