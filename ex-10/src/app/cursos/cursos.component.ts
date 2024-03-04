@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CursosComponent {
 
+  nomePortal: string = 'www.grazilachica.com';
+  cursos: string[] = ['Java', 'Ext JS', 'Angular', 'PHP'];
+
 }
