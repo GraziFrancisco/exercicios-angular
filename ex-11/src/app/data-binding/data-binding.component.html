@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <section>
+                <article>
+                    <h3>Interpolação</h3>
+                    <p>String renderizada com Interpolação: {{ url }}</p>
+                    <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+                    <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
+                    <p>Curso do Angular e gosto do Curso: {{ cursoAngular && getCurtirCurso() }}</p>
+                </article>
+                <article>
+                    <h3>Property Binding</h3>
+                    <img src="http://lorempixel.com.br/400/200" alt=""><br><br>
+                    <img [src]="urlImagem"><br><br>
+                    <img bind-src="urlImagem"><br><br>
+                </article>
+                <article>
+                    <h3>Class e Style Binding</h3>
+                    <div>Selecione uma classe:
+                        <select #classe (change)="0">
+                            <option value="alert-success">Sucesso</option>
+                            <option value="alert-info">Info</option>
+                            <option value="alert-warning">Alerta</option>
+                            <option value="alert-danger">Erro</option>
+                        </select>
+                        <br><br>
+                        <div></div>
+
+                        <div class="alert" role="alert"
+                        [class.alert-success]="classe.value == 'alert-success'">Sucesso</div>
+                        <div class="alert" role="alert"
+                        [class.alert-info]="classe.value == 'alert-info'">Info</div>
+                        <div class="alert " role="alert"
+                        [class.alert-warning]="classe.value == 'alert-warning'">Alerta</div>
+                        <div class="alert" role="alert"
+                        [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>
+
+                        <br><br>
+
+                        <div class="alert">
+                            Texto Colorido conforme valor do combobox.
+                            
+                        </div>
+                        <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+</div>
+
